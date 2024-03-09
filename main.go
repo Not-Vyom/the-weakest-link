@@ -26,6 +26,7 @@ func main() {
 	}
 
 	rootCmd.Flags().StringVarP(&greeting, "greeting", "g", "", "Greeting message")
+	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "Config file (default is config.yaml)")
 
 	cobra.OnInitialize(initConfig)
 

@@ -9,6 +9,5 @@ RUN go build -o hello-world .
 FROM alpine:3.19.1
 
 COPY --from=build /app/hello-world /
-COPY config.yaml /
 
 CMD ["/hello-world"]
